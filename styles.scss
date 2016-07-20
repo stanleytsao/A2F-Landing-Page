@@ -1,0 +1,183 @@
+// styles.scss
+
+@import 'bourbon/bourbon';
+
+/*Variables*/
+
+$Black: #111;
+$ltGray: #666;
+$dkGray: #333;
+$White: #FFF;
+$Orange: #FF9249;
+$Purple: rgba(71, 20, 55, 0.5);
+$Red: #FF5449;
+
+/*General*/
+
+body {
+	background: #333;
+}
+
+.container {
+	width: 950px;
+	margin: auto;
+	font-family: sans-serif;
+}
+
+.sidebar {
+	height: 3210px;
+	width: 25%;
+	float: left;
+	background-color: $Black;
+
+	.year {
+		font-size: 14px;
+		font-weight: bold;
+		color: $dkGray;
+		padding: 0px 20px;
+		margin: 15px 0px;
+	}
+
+	.prefix {
+		font-size: 14px;
+		font-weight: bold;
+		color: $ltGray;
+		padding: 0px 20px;
+		margin: 0px;
+	}
+
+	.title {
+		font-size: 18px;
+		color: $White;
+		padding: 0px 20px;
+		margin: 0px 0px 15px 0px;
+	}
+
+	.logo {
+		height: 180px;
+	}
+}
+
+.content {
+	width: 70%;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+	color: $White;
+
+	.box {
+		border: none;
+	}
+}
+
+.box {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	border-top: 1px solid $dkGray;
+}
+
+.banner {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+
+	img {
+		top: -60%;
+	}
+
+	h2 {
+		position: absolute;
+		top: 15%;
+		left: 0;
+		right: 0;
+	}
+
+	.description {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		text-transform: none;
+		font-size: 14px;
+		padding: 0px 150px;
+	}
+}
+
+.slide {
+	height: 300px;
+	background-color: rgba(255,255,255,0);
+	position: relative;
+	bottom: -140px;
+	transition: all 0.5s ease;
+
+	.prefix {
+		position: absolute;
+		top: 25%;
+		left: 0;
+		right: 0;
+		font-size: 14px;
+	}
+
+	.title {
+		position: absolute;
+		top: 21%;
+		left: 0;
+		right: 0;
+		font-weight: bold;
+		font-size: 40px;
+	}
+}
+
+.box:hover .slide {
+	position: relative;
+	bottom: 0;
+	background-color: $Purple;
+}
+
+.Button {
+	width: 130px;
+	border-radius: 20px;
+	border: 1px solid $Orange;
+	text-transform: none;
+	padding: 5px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25%;
+
+	&.Website {
+		margin-right: 20px;
+	}
+}
+
+img {
+	max-width: 110%;
+	position: absolute;
+	top: -35%;
+	left: -5%;
+}
+
+a {
+	text-decoration: none;
+	color: $Orange;
+}
+
+.coming-soon {
+	width: 100%;
+	height: 100%;
+}
+
+.box:hover .coming-soon {
+	background: $Red;
+}
+
+.coming-soon p {
+	display: inline-block;
+	margin-top: 25%;
+	font-size: 30px;
+	padding: 5px;
+	border: 3px solid $White;
+}
